@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <title> Student Details </title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-brand" id="hg">Student Portal</div>
+            </div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" id="main">
+
+        <div class="row" id="heading" align="center">
+            <p>Student Portal</p>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label for="usr">Name:</label>
+                <input type="text" class="form-control" id="usr">
+            </div>
+            <div class="form-group">
+                <label for="roll_no">Roll No:</label>
+                <input type="number" class="form-control" id="roll">
+            </div>
+            <div class="form-group">
+                <label for="pass_out">Pass out year</label>
+                <input type="number" class="form-control" id="pass_out">
+            </div>
+            <div class="form-group">
+                <label for="stream">Stream:</label>
+                <input type="text" class="form-control" id="stream">
+            </div>
+
+        </form>
+
+        <div class="row">
+            <div>
+                <button class="btn btn-primary btn-block" onclick="Add()">Insert</button>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <p> </p>
+        </div>
+
+        <div class="row">
+            <div>
+                <button class="btn btn-danger btn-block" onclick="remove_selected()">Remove Selected</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <p> </p>
+        </div>
+
+        <div class="row">
+            <b> Edit content by clicking once on particular field </b>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <table class="table" style="margin-top:50px">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Roll No</th>
+                    <th>Pass Year</th>
+                    <th>Stream </th>
+                    <th>Operations</th>
+                </tr>
+            </thead>
+            <tbody id="tab">
+
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+
+</html>
