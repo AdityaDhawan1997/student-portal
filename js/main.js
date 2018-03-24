@@ -1,4 +1,4 @@
-let Add = function () {
+let Add = () => {
 
     let name = document.getElementById("usr").value;
     let roll = document.getElementById("roll").value;
@@ -47,7 +47,7 @@ let Add = function () {
     main_add.appendChild(p);
     main_add.appendChild(s);
     main_add.appendChild(del);
-    $("<td>").html('<input type = "checkbox">').appendTo(main_add);
+    $(`<td>`).html(`<input type = "checkbox">`).appendTo(main_add);
     main.appendChild(main_add);
 
 
@@ -59,12 +59,12 @@ let delete_row = (element) => {
     p.parentNode.removeChild(p);
 }
 
-let remove_selected = function () {
-    var aObj = document.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
-    var i = aObj.length;
-    var unchecked = [];
+let remove_selected =  () {
+    let aObj = document.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+    let i = aObj.length;
+    let unchecked = [];
     while (i--) {
-        var box = aObj[i].getElementsByTagName('input')[0];
+        let box = aObj[i].getElementsByTagName('input')[0];
         if (box.checked) {
             aObj[i].parentNode.removeChild(aObj[i]);
         }
