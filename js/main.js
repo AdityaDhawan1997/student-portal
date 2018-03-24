@@ -59,7 +59,7 @@ let delete_row = (element) => {
     p.parentNode.removeChild(p);
 }
 
-let remove_selected =  () {
+let remove_selected =  () => {
     let aObj = document.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
     let i = aObj.length;
     let unchecked = [];
