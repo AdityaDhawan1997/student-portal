@@ -36,13 +36,13 @@
             <p>Student Portal</p>
         </div>
 
-        <form>
+        <form align="center">
             <div class="form-group">
                 <label for="usr">Name:</label>
                 <input type="text" class="form-control" id="usr">
             </div>
             <div class="form-group">
-                <label for="roll_no">Roll No:</label>
+                <label for="roll_no">Roll No: (Unique)</label>
                 <input type="number" class="form-control" id="roll">
             </div>
             <div class="form-group">
@@ -56,9 +56,9 @@
 
         </form>
 
-        <div class="row">
+        <div class="row" align="center">
             <div>
-                <button class="btn btn-primary btn-block" onclick="Add()">Insert</button>
+                <button class="btn btn-primary" onclick="Add()">Insert</button>
             </div>
 
         </div>
@@ -67,38 +67,75 @@
             <p> </p>
         </div>
 
-        <div class="row">
-            <div>
-                <button class="btn btn-danger btn-block" onclick="remove_selected()">Remove Selected</button>
-            </div>
+		<form>
+			<div class="form-group" align="center">
+				<label for="roll2">Roll No:</label>
+				<input type="number" class="form-control" id="roll2">
+			</div>
+		</form>
+        <div class="row" align="center">
+            <button class="btn btn-primary" onclick="Edit()">Edit</button>
         </div>
-
-        <div class="row">
+		
+		<div class="row">
             <p> </p>
         </div>
 
-        <div class="row">
-            <b> Edit content by clicking once on particular field </b>
-        </div>
+		
+		
+		<div align="center" id="editdiv" style="display:none">
+
+			<form class="form-inline">
+
+			<br>
+            <div class="form-group">
+                <label for="usr2">Name:</label>
+                <input type="text" class="form-control" id="usr2">
+            </div>
+            <div class="form-group">
+                <label for="pass_out2">Pass out year</label>
+                <input type="number" class="form-control" id="pass_out2">
+            </div>
+            <div class="form-group">
+                <label for="stream2">Stream:</label>
+                <input type="text" class="form-control" id="stream2">
+            </div>
+        </form>	
+		<div class="form-group">
+			<button class="btn btn-primary" onclick="Submit()">Submit</button>
+		</div>
+		</div>
+		
     </div>
 
+	
 
 
-    <div class="container">
-        <table class="table" style="margin-top:50px">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Roll No</th>
-                    <th>Pass Year</th>
-                    <th>Stream </th>
-                    <th>Operations</th>
-                </tr>
-            </thead>
-            <tbody id="tab">
+    <div class="container" >
+	
+        
+		<div align="center">
+			<table class="table" style="margin-top:50px">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Roll No</th>
+						<th>Pass Year</th>
+						<th>Stream </th>
+						<th>Operations</th>
+					</tr>
+				</thead>
+				<tbody id="tab">
 
-            </tbody>
-        </table>
+				</tbody>
+			</table>
+		</div>
+		<div class="row" align="center">
+            <div>
+                <button class="btn btn-danger" onclick="remove_selected()">Remove Selected</button>
+            </div>
+        </div>
+
     </div>
 
 
